@@ -1,4 +1,4 @@
-# quad
+# theorems
 
 ## GitHub configuration
 

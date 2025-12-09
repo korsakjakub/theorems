@@ -1,12 +1,10 @@
-import Quad.Basic
 import Mathlib
+import Theorems.Basic
 
 def quadratic (a b c : ℝ) (x : ℝ) : ℝ := a * x ^ 2 + b * x + c
 def Δ (a b c : ℝ) : ℝ := b ^ 2 - 4 * a * c
-theorem diff_of_squares (m n : ℝ) : m^2 - n^2 = (m - n)*(m + n) := by
-    ring
 
-theorem t1 (a b c : ℝ) (x : ℝ) (a_ne_zero : a ≠ 0) (delta_nonneq : Δ a b c ≥ 0) :
+theorem quadratic_eq_sol (a b c : ℝ) (x : ℝ) (a_ne_zero : a ≠ 0) (delta_nonneq : Δ a b c ≥ 0) :
     quadratic a b c x = 0 →
     x = (-b + √(Δ a b c)) / (2 * a) ∨
     x = (-b - √(Δ a b c)) / (2 * a) := by
